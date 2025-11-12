@@ -1,0 +1,25 @@
+# Ігнорувати все
+*
+
+# Дозволити C++ вихідні файли
+!*.cpp
+!*.c
+!*.cc
+!*.cxx
+!*.h
+!*.hpp
+
+# Дозволити структуру папок
+!*/
+
+# Дозволити README та .gitignore
+!.gitignore
+!README.md
+
+# Ігнорувати Draw.io, Word, графіку
+*.drawio
+*.drawio.svg
+*.docx
+*.svg
+*.xml
+*.png
