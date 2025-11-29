@@ -22,15 +22,17 @@ int main()
     while (x <= xk)
     {
         n = 1;
-        a = -x;
+        a = x;     
         S = a;
 
         do {
             n++;
-            R = -x * (1.0 / n);
+            R = x * (n - 1) / n; 
             a *= R;
             S += a;
         } while (abs(a) >= eps);
+
+        S = -S;
 
         cout << "|"
             << setw(7) << setprecision(2) << x << " |"

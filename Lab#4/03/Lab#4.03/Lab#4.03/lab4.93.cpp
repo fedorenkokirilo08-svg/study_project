@@ -14,7 +14,7 @@ int main() {
 	cout << "dx = "; cin >> dx;
 	cout << fixed << setprecision(10);
     cout << "------------------------------------------\n";
-    cout << "|         x         |            F       |\n";
+    cout << "|         x       |              F       |\n";
     cout << "------------------------------------------\n";
 
     for (double x = xp; x <= xk + dx / 2; x += dx) {

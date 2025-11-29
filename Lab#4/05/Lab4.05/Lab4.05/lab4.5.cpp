@@ -4,6 +4,7 @@
 #include <time.h>
 using namespace std;
 
+
 int main()
 {
     double x, y, R;
@@ -14,11 +15,12 @@ int main()
     {
         cout << "x = "; cin >> x;
         cout << "y = "; cin >> y;
-        if ((x >= 0 && y >= 0 && pow(x - R, 2) + pow(y, 2) <= R * R) &&
-            !(x <= 0 && y <= 0 && pow(x + R, 2) + pow(y, 2) <= R * R))
+        if ((y >= 0 && pow(x - R, 2) + pow(y, 2) <= R * R)
+            || (x <= 0 && y <= 0 && x >= -R && y >= -R && pow(x + R, 2) + pow(y + R, 2) >= R * R))
             cout << "yes" << endl;
         else
             cout << "no" << endl;
+
     }
 
     cout << endl << fixed;
@@ -27,8 +29,8 @@ int main()
     {
         x = 4. * rand() / RAND_MAX - 2;
         y = 4. * rand() / RAND_MAX - 2;
-        if ((x >= 0 && y >= 0 && pow(x - R, 2) + pow(y, 2) <= R * R) &&
-            !(x <= 0 && y <= 0 && pow(x + R, 2) + pow(y, 2) <= R * R))
+        if ((y >= 0 && pow(x - R, 2) + pow(y, 2) <= R * R)
+            || (x<=0 && y<=0 && x >= -R && y >= -R && pow(x+R, 2) + pow(y+R, 2) >= R * R))
             cout << setw(8) << setprecision(4) << x << " "
             << setw(8) << setprecision(4) << y << " " << "yes" << endl;
         else

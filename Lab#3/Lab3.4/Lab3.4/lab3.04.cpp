@@ -14,8 +14,8 @@ int main()
 	cout << "x = "; cin >> x;
 	cout << "y = "; cin >> y;
 	cout << "R = "; cin >> R;
-	if ((((x - R) * (x - R) + y * y <= R * R) && (y >= 0)) ||
-		(((x + R) * (x + R) + (y + R) * (y + R) <= R * R))) 
+	if ((y >= 0 && pow(x - R, 2) + pow(y, 2) <= R * R)
+		|| (x <= 0 && y <= 0 && x >= -R && y >= -R && pow(x + R, 2) + pow(y + R, 2) >= R * R))
 	{
 		cout << "Yes!" << endl;
 	}
