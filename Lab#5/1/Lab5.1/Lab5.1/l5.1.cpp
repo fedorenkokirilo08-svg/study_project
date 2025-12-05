@@ -1,7 +1,9 @@
 #include <iostream>
 #include <cmath>
 using namespace std;
+
 double g(const double x, const double y);
+
 int main() {
 	double s, t;
 	cout << "s ="; cin >> s;
@@ -10,7 +12,8 @@ int main() {
 	cout << "c =" << c;
 	return 0;
 }
-double g(const double x, const double y) 
+
+double g(const double x, const double y)
 {
 	return (x / (y * y)) - (sin(y / (x * x)));
 }
